@@ -1,0 +1,27 @@
+{% from 'main.html' import head_block %}
+{% from 'main.html' import scripts %}
+{% from 'main.html' import title %}
+{% from 'macros/vertical_space.html' import vertical_space %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Event - {{ title() }}</title>
+
+	{{ head_block() }}
+</head>
+
+<body>
+	{% include 'crumbs/header.html' %}
+
+    {% for file in event_section_files %}
+    	{% include "sections/event_sections/" + file %}
+    {% endfor %}
+
+	{% include 'crumbs/footer.html' %}
+
+
+	{{ scripts() }}
+</body>
+
+</html>

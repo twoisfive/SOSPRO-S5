@@ -1,0 +1,46 @@
+{% from 'macros/vertical_space.html' import vertical_space %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>
+		{% macro title() %}
+		SOSPRO S5
+		{% endmacro %}
+		
+		{{ title() }}
+	</title>
+
+	{% macro head_block() %}
+	<meta content="#ffe600" data-react-helmet="true" name="theme-color" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico')}}">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		crossorigin="anonymous">
+	{% endmacro %}
+
+	{{ head_block() }}
+</head>
+
+<body>
+	{% include 'crumbs/header.html' %}
+
+    {% for file in main_section_files %}
+    	{% include "sections/main_sections/" + file %}
+    {% endfor %}
+
+	{% include 'crumbs/footer.html' %}
+
+
+
+	{% macro scripts() %}
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+		crossorigin="anonymous"></script>
+	{% endmacro %}
+
+	{{ scripts() }}
+</body>
+
+</html>
