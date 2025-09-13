@@ -36,4 +36,4 @@ def serve_files(filename):
     return send_from_directory(os.path.join(BASE_DIR, "video"), filename)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=7003)
+    app.run(host='0.0.0.0', port=7004)
