@@ -22,6 +22,12 @@
 	{% endmacro %}
 
 	{{ head_block() }}
+
+	<style>
+    {% for file in styles_files %}
+    	{% include "styles/" + file %}
+    {% endfor %}
+	</style>
 </head>
 
 <body>
@@ -41,6 +47,12 @@
 	{% endmacro %}
 
 	{{ scripts() }}
+
+	<script>
+    {% for file in scripts_files %}
+    	{% include "scripts/" + file %}
+    {% endfor %}
+	</script>
 </body>
 
 </html>
