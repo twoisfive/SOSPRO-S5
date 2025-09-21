@@ -1,0 +1,16 @@
+.bg-gradient-custom-main1
+{
+    background: linear-gradient(180deg, #2F0851, #74068B);
+}
+
+.bg-gradient-custom-main2 {
+    background: linear-gradient(180deg, #74068B, #7900D5);
+}
+
+.bg-gradient-custom-main3 {
+    background: linear-gradient(180deg, #7900D5, #001937);
+}
+
+.bg-gradient-custom-main4 {
+    background: linear-gradient(180deg, #001937, #56049E);
+}
