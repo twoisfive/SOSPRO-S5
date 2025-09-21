@@ -1,0 +1,25 @@
+.header-bg-custom1 {
+    background: linear-gradient(180deg, #2F0852, #2F0851);
+}
+
+.header-bg-custom2 {
+    background: #23006E
+}
+
+.header-bg-custom3 {
+    background: #23006E
+}
+
+.header-bg-custom4 {
+    background: linear-gradient(180deg, #23006E, #4300D4, #3900B3);
+}
+
+.navbar .nav-link {
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link.active {
+    background-color: #fff;
+    color: #000 !important;
+}
+
