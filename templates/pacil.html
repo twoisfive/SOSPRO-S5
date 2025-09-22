@@ -14,6 +14,10 @@
     {% for file in styles_files %}
     	{% include "styles/" + file %}
     {% endfor %}
+
+	{% for file in section_style_files %}
+		{% include "styles_per_page/pacil/" + file %}
+	{% endfor %}
 	</style>
 </head>
 
