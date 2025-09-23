@@ -1,9 +1,45 @@
 {% from 'macros/vertical_space.html' import vertical_space %}
 
-<section class="container-fluid">
-    <div class="row d-flex justify-content-center align-items-center border border-dark">
-        {{ vertical_space("10rem") }}
-        <h1 class="text-center">Section 1 Goes Here</h1>
-        {{ vertical_space("10rem") }}
+ <section class="pacil-section1">
+  <div class="pacil-scroll-wrapper" id="pacil-scroll">
+    <div class="pacil-slide">
+      <div class="pacil-left">
+        <img src="/static/images/Fasilkom-Ui.png" alt="Fasilkom UI Logo" class="pacil-logo" />
+        <h2>Fakultas Ilmu Komputer</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="pacil-right">
+        <!-- Konten Tambahan -->
+      </div>
     </div>
+
+    <!-- Slide 2 -->
+    <div class="pacil-slide">
+      <div class="pacil-left">
+        <img src="/static/images/Fasilkom-Ui.png" alt="Fasilkom UI Logo" class="pacil-logo" />
+        <h2>Fakultas Ilmu Komputer</h2>
+        <p>Contoh konten slide ke-2.</p>
+      </div>
+      <div class="pacil-right"></div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="pacil-slide">
+      <div class="pacil-left">
+        <img src="/static/images/Fasilkom-Ui.png" alt="Fasilkom UI Logo" class="pacil-logo" />
+        <h2>Fakultas Ilmu Komputer</h2>
+        <p>Contoh konten slide ke-3.</p>
+      </div>
+      <div class="pacil-right"></div>
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="pagination-dots" id="paginationDots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 </section>
