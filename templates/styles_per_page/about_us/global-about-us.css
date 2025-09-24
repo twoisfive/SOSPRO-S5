@@ -21,10 +21,6 @@
   color: #fff;
 }
 
-.ig-btn img {
-  background: none;
-  display: block;  /* avoids weird spacing from inline images */
-}
 
 /* ================================
    LAYOUT
