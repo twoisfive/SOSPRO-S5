@@ -17,6 +17,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico')}}">
 
+	<style>
+        @font-face {
+            font-family: "SquareGame";
+            src: url("{{ url_for('static', filename='Square-Game.ttf') }}") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .font-squaregame {
+            font-family: "SquareGame", sans-serif;
+			font-weight: 400;
+			font-style: Regular;
+			font-size: 60px;
+			leading-trim: NONE;
+			line-height: 100px;
+			letter-spacing: 0%;
+        }
+    </style>
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		crossorigin="anonymous">
 	{% endmacro %}
