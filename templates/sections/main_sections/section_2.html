@@ -1,26 +1,68 @@
-{% from 'macros/vertical_space.html' import vertical_space %}
-
 <section class="container-fluid bg-gradient-custom-main2 text-white py-5">
     <div class="container text-center">
-        <h1 class="fw-bold mb-5">WHAT WE DO</h1>
-        
-        <div class="row g-4">
-            <!-- Left card -->
-            <div class="col-md-6">
-                <div class="bg-light rounded-4 shadow p-5 h-100">
-                    <div class="d-flex justify-content-center gap-3">
-                    </div>
-                </div>
-            </div>
+        <h1 class="fw-bold mb-5 font-squaregame">WHAT WE DO</h1>
 
-            <!-- Right card -->
-            <div class="col-md-6">
-                <div class="bg-light rounded-4 shadow p-5 h-100">
-                    <div class="d-flex justify-content-center gap-3">
+        <div id="slide" class="slider">
+            <div id="slide-track" class="slide-track">
+                {% set cards = [
+                {"title": "Jawa 1", "image": "/static/img/nimpa.jpg"},
+                {"title": "Jawa 2", "image": "/static/img/nimpa.jpg"},
+                {"title": "Jawa 3", "image": "/static/img/nimpa.jpg"},
+                {"title": "Jawa 4", "image": "/static/img/nimpa.jpg"}
+                ] %}
+
+                {% for card in cards %}
+                    <div class="slide" style="background-image: url('{{ card.image }}')">
+                        <div class="overlay">
+                            <h3 class="font-squaregame">{{ card.title }}</h3>
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
+
+                {% for card in cards %}
+                    <div class="slide" style="background-image: url('{{ card.image }}')">
+                        <div class="overlay">
+                            <h3 class="font-squaregame">{{ card.title }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </section>
+
+<script>
+setTimeout(() =>
+{
+    const slide = document.getElementById("slide")
+    const track = document.getElementById("slide-track")
+    //const track2 = document.getElementById("slide-track2")
+    let speed = .4 //px/frame
+    let position = 0
+    let paused = !1
+
+    //const slides = track.innerHTML
+    //track.innerHTML += slides
+
+    animate()
+    function animate()
+    {
+        //if (!paused)
+        {
+            position -= speed
+            const totalWidth = track.scrollWidth / 2
+
+            if (Math.abs(position) >= totalWidth) position = 0
+
+            track.style.transform = `translateX(${position}px)`
+            //track2.style.transform = `translateX(${position}px)`
+        }
+        
+        requestAnimationFrame(animate)
+    }
+
+    //slide.addEventListener("mouseenter", () => paused = !0)
+    //slide.addEventListener("mouseleave", () => paused = !1)
+}, 1000)  
+</script>
 

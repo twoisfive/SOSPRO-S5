@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "SquareGame";
+    src: url("{{ url_for('static', filename='Square-Game.ttf') }}") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-squaregame {
+    font-family: "SquareGame", sans-serif;
+    font-weight: 400;
+}
+
+@font-face {
+  font-family: "Request";
+  src: url("{{ url_for('static', filename='Request.ttf') }}");
+}
+
+@font-face {
+  font-family: "UniNeue";
+  src: url("{{ url_for('static', filename='UniNeue-Trial-Regular.ttf') }}");
+}

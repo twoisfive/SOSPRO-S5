@@ -11,14 +11,22 @@
 		{{ title() }}
 	</title>
 
+	<style>
+        .font-squaregame {
+			font-style: Regular;
+			font-size: 60px;
+			leading-trim: NONE;
+			line-height: 100px;
+			letter-spacing: 0%;
+        }
+	</style>
+
 	{% macro head_block() %}
 	<meta content="#ffe600" data-react-helmet="true" name="theme-color" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico')}}">
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-		crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 	{% endmacro %}
 
 	{{ head_block() }}

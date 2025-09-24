@@ -1,0 +1,59 @@
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slide-track {
+    display: flex;
+    gap: 1rem;
+
+    /* dumbass drawing stuff */
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.slider:hover .slide-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 250px;
+
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+
+    transition: transform 0.3s ease;
+}
+
+.slide:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.slide .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slide:hover .overlay {
+    opacity: 1;
+}
+
+.slide .overlay h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
