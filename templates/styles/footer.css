@@ -1,0 +1,22 @@
+.footer-bg-custom1 {
+    background: linear-gradient(180deg, #56049E, #120124);
+}
+
+.footer-bg-custom2 {
+    background: #20013d;
+}
+
+.footer-bg-custom3 {
+    background: #20013d;
+}
+
+.footer-bg-custom4 {
+    background: #20013d;
+}
+
+.ig-btn {
+  background: none;   /* remove default gray background */
+  border: none;       /* remove border */
+  padding: 0;         /* remove extra spacing */
+  cursor: pointer;    /* make it clickable */
+}
