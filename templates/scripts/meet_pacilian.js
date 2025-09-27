@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const content = document.getElementById("paciliansContent");
 
   const data = {
-    dosen: [
+    manajemen: [
       {
         name: "Ambatron",
         desc: "Kalkulus 1 - Z",
         img: "/static/images/ambatron.png"
       }
     ],
-    asdos: [
+    staf-pengajar-tetap: [
       {
         name: "Budi",
         desc: "Pemrograman Lanjut",

@@ -1,0 +1,82 @@
+.pacil-section2 {
+  background: linear-gradient(to bottom, #200061, #0f0030);
+  padding: 60px 20px;
+  color: white;
+}
+
+.pegawai-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Kiri: Grid Pegawai */
+.pegawai-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1 1 60%;
+}
+
+.pegawai-card {
+  background-color: #15003a;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.icon-user {
+  font-size: 36px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Optional: If not using icon lib, use emoji */
+.icon-user::before {; 
+  font-size: 36px;
+  display: block;
+}
+
+.pegawai-count {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pegawai-label {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Kanan: Konten Tambahan */
+.pegawai-info {
+  flex: 1 1 35%;
+  background-color: #ddd;
+  border-radius: 16px;
+  min-height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pegawai-container {
+    flex-direction: column;
+  }
+
+  .pegawai-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pegawai-info {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pegawai-grid {
+    grid-template-columns: 1fr;
+  }
+}
