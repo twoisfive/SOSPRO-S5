@@ -21,11 +21,6 @@
   color: #fff;
 }
 
-.ig-btn img {
-  background: none;
-  display: block;  /* avoids weird spacing from inline images */
-}
-
 /* ================================
    LAYOUT
 ================================ */
@@ -140,15 +135,22 @@
 .member-card__img {
   border-radius: 10px;
   margin-bottom: 1rem;
+  object-fit: cover;
 }
 
 .member-card__name {
   font-size: 1.2rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 .member-card__major {
   font-size: 0.9rem;
   color: #bbb;
   margin-bottom: 0.5rem;
+}
+
+/*===== POSITIONING =====*/
+
+.object-top {
+  object-position: top;
 }
