@@ -1,20 +1,119 @@
 {% from 'macros/vertical_space.html' import vertical_space %}
 
-<section class="pacil-section3">
-  <h2 class="pacilians-title">MEET THE PACILIANS</h2>
+<section class="container-fluid bg-gradient-custom-about2 text-color-section">
+    <div class="row d-flex justify-content-center align-items-center">
+        <section class="division">
+            <h2 class="division__title mb-3">MEET THE PACILIANS</h2>
+            
+            <div class="division__menu">
+                <div class="division__row">
+                    <a href="#manajemen" class="division__btn">Manajemen</a>
+                    <a href="#staf-pengajar" class="division__btn">Staf Pengajar</a>
+                    <a href="#security" class="division__btn">Keamanan</a>
+                </div>
+                <div class="division__row">
+                    <a href="#cleaning-service" class="division__btn">Kebersihan</a>
+                    <a href="#kantin" class="division__btn">Kantin</a>
+                    <a href="#gardener" class="division__btn">Tukang Kebun</a>
+                </div>
+            </div>
 
-  <div class="pacilians-buttons">
-    <button class="pacilians-btn active" data-category="dosen">Dosen</button>
-    <button class="pacilians-btn" data-category="asdos">Asdos</button>
-    <button class="pacilians-btn" data-category="kebersihan">Kebersihan</button>
-    <button class="pacilians-btn" data-category="kantin">Kantin</button>
-    <button class="pacilians-btn" data-category="keamanan">Keamanan</button>
-    <button class="pacilians-btn" data-category="tukang-kebun">Tukang Kebun</button>
-  </div>
+<div class="division__grid">
+            <div class="division__block" id="manajemen">
+                <h3 class="division__block-subtitle">Manajemen</h3>
+                <div class="division__members">
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Prof. Dr. Ir. Petrus Mursanto, M.Sc.</h4>
+                        <p class="member-card__major">Dekan</p>
+                    </div>
+                </div>
+            </div>
 
-  <div class="pacilians-content" id="paciliansContent">
-    <!-- Konten Section 4 akan diganti dinamis via JS -->
-  </div>
+            <div class="division__block" id="staf-pengajar">
+                <h3 class="division__block-subtitle">Staf Pengajar</h3>
+                <div class="division__members">
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Citra Lestari</h4>
+                        <p class="member-card__major">Guru Matematika</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division__block" id="security">
+                <h3 class="division__block-subtitle">Keamanan</h3>
+                <div class="division__members">
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Jamiatul Isyro</h4>
+                        <p class="member-card__major">Keamanan</p>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Ratrehan Syabilla</h4>
+                        <p class="member-card__major">Keamanan</p>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Muhammad Raihan</h4>
+                        <p class="member-card__major">Keamanan</p>
+                    </div>
+                    
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Hardiansyah</h4>
+                        <p class="member-card__major">Keamanan</p>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Fikri Feriansyah</h4>
+                        <p class="member-card__major">Keamanan</p>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">M Agil</h4>
+                        <p class="member-card__major">Keamanan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="division__block" id="cleaning-service">
+                <h3 class="division__block-subtitle">Kebersihan</h3>
+                <div class="division__members">
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Endang Sutisna</h4>
+                        <p class="member-card__major">Kepala Keamanan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="division__block" id="kantin">
+                <h3 class="division__block-subtitle">Kantin</h3>
+                <div class="division__members">
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Endang Sutisna</h4>
+                        <p class="member-card__major">Kepala Keamanan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="division__block" id="gardener">
+                <h3 class="division__block-subtitle">Tukang Kebun</h3>
+                <div class="division__members">
+                    <div class="member-card">
+                        <img src="static/img/default-pacil.jpg" alt="Foto Anggota" class="member-card__img">
+                        <h4 class="member-card__name">Endang Sutisna</h4>
+                        <p class="member-card__major">Kepala Keamanan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
-
-
