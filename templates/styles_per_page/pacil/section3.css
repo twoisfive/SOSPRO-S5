@@ -1,7 +1,10 @@
 /*========GLOBAL=========*/
 
 :root {
-  --card-bg: #270575
+  --card-bg: #270575;
+  --light: #fff; /* Menambahkan variabel untuk warna terang */
+  --dark: #000; /* Menambahkan variabel untuk warna gelap */
+  --secondary: #00bcd4; /* Menambahkan variabel warna sekunder untuk hover/active */
 }
 
 .bg-gradient-custom-about1
@@ -10,7 +13,7 @@
 }
 
 .bg-gradient-custom-about2 {
-    background: #23006E  
+    background: #23006E;
 }
 
 .bg-gradient-custom-about3 {
@@ -25,7 +28,7 @@
    LAYOUT
 ================================ */
 
-/* About Us */
+/* About Us (Tidak ada perubahan) */
 .about-us {
   display: flex;
   justify-content: space-between;
@@ -33,17 +36,12 @@
   padding: 4rem 8%;
   gap: 3rem;
 }
-
-.about-us__content {
-  flex: 1;
-}
-
+.about-us__content { flex: 1; }
 .about-us__desc {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #d0cde1;
 }
-
 .about-us__logo {
   flex: 1;
   text-align: center;
@@ -63,6 +61,14 @@
   margin-bottom: 1rem;
 }
 
+.division__block-subtitle{
+  font-family: "SquareGame";
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
 .division__menu {
   background: #2e097d;
   display: block;
@@ -74,7 +80,7 @@
 .division__btn {
   background: #1a0444;
   border: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem; /* Sedikit padding horizontal tambahan */
   border-radius: 10px;
   color: var(--light);
   font-weight: bold;
@@ -86,7 +92,7 @@
 
 .division__row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ukuran minmax disesuaikan */
   gap: 1rem;
   margin: 0.5rem 0;   
 }
@@ -95,6 +101,8 @@
   background: var(--secondary);
   color: var(--dark);
 }
+
+/* [PENAMBAHAN] Gaya untuk tombol yang sedang aktif */
 
 /* Division Grid */
 
@@ -106,7 +114,9 @@
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 15px;
-  margin-bottom: 3rem
+  margin-bottom: 3rem;
+  /* [PENAMBAHAN] Transisi untuk showing/hiding yang lebih mulus */
+  transition: all 0.5s ease;
 }
 
 .division__block-subtitle {
@@ -116,14 +126,28 @@
 
 .division__members {
   display: flex;
-  flex-wrap: wrap;            /* allow multiple rows */
-  justify-content: center; /* spread cards across the row */
-  gap: 1.5rem;                /* consistent gaps */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
+
+/* Pastikan ada di file CSS Anda */
+
+.division__btn.active {
+  background: #00bcd4; /* Atau warna lain yang Anda inginkan untuk tombol aktif */
+  color: #000;
+  transform: scale(1.05);
+}
+
+.division__block.hide {
+  display: none; /* Baris ini SANGAT PENTING untuk menyembunyikan elemen */
+}
+
+
 /* Member Card */
 
 .member-card {
-  flex: 0 1 calc(33.333% - 1rem); /* ~3 per row, accounting for gap */
+  flex: 0 1 300px; /* Diubah dari calc agar lebih predictable */
   max-width: 300px;    
   background: #1a0444;
   border-radius: 15px;
@@ -132,7 +156,10 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
+/* [MODIFIKASI] Menambahkan properti untuk rasio 1:1 */
 .member-card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 10px;
   margin-bottom: 1rem;
   object-fit: cover;
@@ -141,6 +168,7 @@
 .member-card__name {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: var(--light); /* [PENAMBAHAN] Memastikan teks nama berwarna terang */
 }
 
 .member-card__major {
@@ -150,7 +178,7 @@
 }
 
 /*===== POSITIONING =====*/
-
 .object-top {
   object-position: top;
 }
+
